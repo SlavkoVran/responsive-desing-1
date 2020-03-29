@@ -1,0 +1,77 @@
+.section-three {
+    margin: 30px 0px;
+    @include display-flex(center,center);
+    flex-direction: column;
+    width: 80%;
+}
+.section-three-content {
+    @media screen and (min-width: $large) {
+        @include display-flex(center, center);
+    }
+}
+
+.card-three{
+@include display-flex(flex-start, center);
+    flex-direction: column;
+    color: $bg-color;
+    box-shadow: 0px 10px 5px rgba(0,0,0,0.35);
+    margin: 30px 0;
+    padding-bottom: 20px;
+    height: 100%;
+    
+    img {
+        width: 100%;
+        object-fit: contain;
+        clip-path: polygon(0 0, 100% 0, 100% 84%, 0% 100%);
+    }
+    p {
+        width: 60%;
+        font-size: 14px;
+        line-height: 20px;
+        color: $bg-color;
+        font-weight: bold;
+        text-align: center;
+        padding:10px; 
+    }
+    @include not-last-child('p') {
+        border-bottom: 2px solid grey;
+    }
+    @media screen and (min-width: $large) {
+        max-width: 300px;
+        margin: 0 2rem;
+    }
+}
+
+.card-three-hard {
+    @extend .card-three;
+    background: $bg-color;
+    p {
+        color: set-color($bg-color)
+    }
+}
+
+.card-three-title {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: set-color(white);
+    font-weight: 700;
+    text-align: center;
+}
+
+.card-three-title-hard {
+    @extend .card-three-title;
+    color: set-color($bg-color);
+}
+
+.btn {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    background-image: linear-gradient(90deg, #1e5d69 0%, #0093af 100%);
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    border-width: 0;
+    margin: 30px 0;
+}

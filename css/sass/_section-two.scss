@@ -1,0 +1,85 @@
+.section-two {
+    @include display-flex(center, center);
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    background-image: url("../img/img-bg-adventure.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 30px;
+    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 100%);
+    @media screen and (min-width: $medium) {
+        @include display-flex(space-around, center);    
+        height: 775px;
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+    }
+}
+
+.bg-layer {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(135deg, #0093afe6 0%, #0093af4d 100%);
+}
+
+.section-two-title {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    @media screen and (min-width: $medium) {
+        margin-top: 5rem;
+    }
+}
+.section-two-container {
+    @include display-flex(center, center);
+    flex-direction: column;
+    width: 80%;
+    @media screen and (min-width: $medium) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: $large) {
+        margin-bottom: 5rem;
+        width: 100%;
+    }
+}
+
+.card {
+    height: 300px;
+    @include display-flex(space-between, center);
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    * {
+        margin-bottom: 10px;
+    }
+    @media screen and (min-width: $medium) {
+        width: 240px;
+        height: 300px;
+        margin: 20px 20px;
+    }
+}
+
+.card-title {
+    font-size: 16px;
+    color: #2d4e54;
+    font-weight: 700;
+    text-align: center;
+}
+
+.card-text {
+    height: 130px;
+    font-size: 13px;
+    line-height: 21px;
+    color: #666666;
+    font-weight: 400;
+    text-align: center;
+    @media screen and (min-width: $medium) {
+      height: 100%;
+    }
+}

@@ -1,0 +1,45 @@
+footer {
+    @include display-flex(center, center);
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    background-color: #2d4e54;
+    position: relative;
+    padding: 0 20px;
+}
+
+.copy {
+    @include display-flex(space-between, center);
+    position: absolute;
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1b373c;
+    padding: 0 5%;
+}
+
+.logo-footer { 
+    @extend .logo;
+    order: unset;
+}
+
+.social-media {
+    @include display-flex(center, center);
+    margin-bottom: 45px;
+}
+
+.social-container {
+    @include display-flex(center, center);
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: #0093af;
+    margin: 15px;
+}
+
+.menu {
+    @extend .nav-bar;
+    order: unset;
+}
